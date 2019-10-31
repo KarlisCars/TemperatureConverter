@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="XY7-UR-E9C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="sun.min" catalog="system" maximumValueImage="sun.max.fill" translatesAutoresizingMaskIntoConstraints="NO" id="W9M-i8-UZp" userLabel="Temp Slider">
                                 <rect key="frame" x="67" y="314.5" width="186" height="31"/>
                                 <color key="tintColor" red="1" green="0.1935164576" blue="0.010587793539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -25,12 +28,6 @@
                                     <action selector="tempSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="FVm-24-mkE"/>
                                 </connections>
                             </slider>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="XY7-UR-E9C">
-                                <rect key="frame" x="0.0" y="-228" width="320" height="896"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="896" id="JJp-Zo-fCS"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-Ie-voG">
                                 <rect key="frame" x="32" y="91" width="256" height="29"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
@@ -54,17 +51,18 @@
                         <constraints>
                             <constraint firstItem="bxf-Ie-voG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4pS-bb-MKx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W9M-i8-UZp" secondAttribute="trailing" constant="69" id="6He-0V-WnV"/>
-                            <constraint firstItem="XY7-UR-E9C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUC-yj-NHU"/>
-                            <constraint firstItem="XY7-UR-E9C" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="100" id="EZ4-Co-dCv"/>
+                            <constraint firstItem="XY7-UR-E9C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Mg-iU-yQv"/>
+                            <constraint firstItem="XY7-UR-E9C" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6xa-I9-7ZH"/>
+                            <constraint firstItem="XY7-UR-E9C" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7cn-1m-MY6"/>
                             <constraint firstItem="SpA-7v-k7k" firstAttribute="top" secondItem="W9M-i8-UZp" secondAttribute="bottom" constant="20" id="Inv-Dg-WTZ"/>
                             <constraint firstItem="SpA-7v-k7k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M50-Iz-dpR"/>
                             <constraint firstItem="W9M-i8-UZp" firstAttribute="top" secondItem="Uji-a7-LFl" secondAttribute="bottom" constant="20" id="Pqe-BQ-asi"/>
                             <constraint firstItem="W9M-i8-UZp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QNS-4a-1Oe"/>
                             <constraint firstItem="bxf-Ie-voG" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Sbe-7v-wVY"/>
                             <constraint firstItem="W9M-i8-UZp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="VkQ-h4-9oj"/>
+                            <constraint firstItem="XY7-UR-E9C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YQz-0Q-USN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxf-Ie-voG" secondAttribute="trailing" constant="32" id="ZyD-qW-jvS"/>
                             <constraint firstItem="bxf-Ie-voG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fF9-RN-Pi0"/>
-                            <constraint firstItem="XY7-UR-E9C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kjh-7E-3Vp"/>
                             <constraint firstItem="W9M-i8-UZp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lZR-Wr-rLD"/>
                             <constraint firstItem="Uji-a7-LFl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rcc-gY-QfK"/>
                         </constraints>
@@ -100,7 +98,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundImage.png" width="375" height="812"/>
+        <image name="backgroundImage" width="375" height="812"/>
         <image name="sun.max.fill" catalog="system" width="64" height="62"/>
         <image name="sun.min" catalog="system" width="64" height="60"/>
     </resources>
